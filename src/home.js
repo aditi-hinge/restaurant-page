@@ -24,9 +24,38 @@ const homeContent=()=>{
 
     //append
     homeDiv.appendChild(welcome);
-    // return welcome;
+    return welcome;
 }
 
 document.body.appendChild(homeContent());
 
-export { homeContent };
+//buttons for tabs
+const tabButtons=()=>{
+    //create tab div
+    let tab = document.createElement("div");
+    tab.setAttribute("id","tab");
+    container.appendChild(tab);
+
+    //create
+    let homeButton = document.createElement("button");
+    let menuButton = document.createElement("button");
+    let locationButton = document.createElement("button");
+
+    //name
+    homeButton.textContent = "HOME";
+    menuButton.textContent = "MENU";
+    locationButton.textContent = "LOCATION";
+
+    //append
+    tab.appendChild(homeButton);
+    tab.appendChild(menuButton);
+    tab.appendChild(locationButton);
+
+    //return
+    return{
+        homeButton, menuButton,locationButton
+    };
+}
+document.body.appendChild(tabButtons());
+
+export { homeContent, tabButtons };
