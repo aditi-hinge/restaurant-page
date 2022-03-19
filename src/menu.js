@@ -1,6 +1,13 @@
+import PizzaImageOG from './pizza.jpg';
+import BurgerImageOG from './burger.jpg';
+import CupcakeImageOG from './cupcake.jpg';
+import './style.css';
+
 let container = document.getElementById("container");
 
 const menuContent =()=>{
+
+    // document.body.style.backgroundImage
     //make menu container
     const pizzaContainer = document.createElement("div");
     pizzaContainer.setAttribute("class", "menuBox");
@@ -8,8 +15,12 @@ const menuContent =()=>{
     //pizza div
     const pizzaDiv = document.createElement("div");
     pizzaDiv.setAttribute("class", "foodDiv");
-    const pizzaImage = document.createElement("img");
-    pizzaImage.src = "./pizza.jpg";
+
+    //try adding pizza image
+    
+    // const pizzaImage = document.createElement("img");
+    const pizzaImage = new Image();
+    pizzaImage.src = PizzaImageOG;
     pizzaImage.setAttribute("class", "foodImage");
     
     //image div
@@ -36,8 +47,11 @@ const menuContent =()=>{
     //burger div
     const burgerDiv = document.createElement("div");
     burgerDiv.setAttribute("class", "foodDiv");
-    const burgerImage = document.createElement("img");
-    burgerImage.src = "./burger.jpg";
+
+    //add burger image
+    // const burgerImage = document.createElement("img");
+    const burgerImage = new Image();
+    burgerImage.src = BurgerImageOG;
     burgerImage.setAttribute("class", "foodImage");
 
     //image div
@@ -64,8 +78,11 @@ const menuContent =()=>{
     //cupcake div
     const cupcakeDiv = document.createElement("div");
     cupcakeDiv.setAttribute("class", "foodDiv");
-    const cupcakeImage = document.createElement("img");
-    cupcakeImage.src = "./cupcake.jpg";
+
+    //add cupcake image
+    // const cupcakeImage = document.createElement("img");
+    const cupcakeImage = new Image();
+    cupcakeImage.src = CupcakeImageOG;
     cupcakeImage.setAttribute("class", "foodImage");
 
     //image div
