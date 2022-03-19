@@ -86,3 +86,5 @@ const menuContent =()=>{
 }
 
 document.body.appendChild(menuContent());
+
+export { menuContent };
