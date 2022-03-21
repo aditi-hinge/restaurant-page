@@ -3,6 +3,7 @@ import './style.css';
 let container = document.getElementById("container");
 
 const locationContent=()=>{
+    console.log("location here!");
     const locationBox = document.createElement("div");
     locationBox.setAttribute("id", "locationBox");
     container.appendChild(locationBox);
@@ -23,6 +24,8 @@ const locationContent=()=>{
     const map = document.createElement("div");
     map.setAttribute("id", "map");
     locationBox.appendChild(map);
+
+    return container;
 }
-document.body.appendChild(locationContent());
+// document.body.appendChild(locationContent());
 export { locationContent };

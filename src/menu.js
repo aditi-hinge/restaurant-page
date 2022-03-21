@@ -100,8 +100,10 @@ const menuContent =()=>{
     cupcakeDiv.appendChild(cupcakeImageDiv);
     cupcakeImageDiv.appendChild(cupcakeImage);
     cupcakeDiv.appendChild(cupcakeInfo);
+
+    return container;
 }
 
-document.body.appendChild(menuContent());
+// document.body.appendChild(menuContent(container));
 
 export { menuContent };

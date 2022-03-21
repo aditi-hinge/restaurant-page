@@ -1,15 +1,16 @@
 import './style.css';
-import FnafBG from './fnaf.jpg';
+// import FnafBG from './fnaf.jpg';
 
 
 let container = document.getElementById("container");
 
 //home tab
 const homeContent=()=>{
+    console.log("home here!");
     //add BG image
-    const bGImage = new Image();
-    bGImage.src = FnafBG;
-    container.appendChild(FnafBG);
+    // const bGImage = new Image();
+    // bGImage.src = FnafBG;
+    // container.appendChild(bGImage);
     //home div
     const homeDiv = document.createElement("div");
     homeDiv.setAttribute("id","homeContent");
@@ -24,10 +25,11 @@ const homeContent=()=>{
 
     //append
     homeDiv.appendChild(welcome);
-    return welcome;
+    
+    return container;
 }
 
-document.body.appendChild(homeContent());
+// document.body.appendChild(homeContent());
 
 //buttons for tabs
 const tabButtons=()=>{
@@ -41,6 +43,11 @@ const tabButtons=()=>{
     let menuButton = document.createElement("button");
     let locationButton = document.createElement("button");
 
+    //set IDs
+    homeButton.setAttribute("id", "homeBtn");
+    menuButton.setAttribute("id", "menuBtn");
+    locationButton.setAttribute("id", "locationBtn");
+
     //name
     homeButton.textContent = "HOME";
     menuButton.textContent = "MENU";
@@ -52,10 +59,8 @@ const tabButtons=()=>{
     tab.appendChild(locationButton);
 
     //return
-    return{
-        homeButton, menuButton,locationButton
-    };
+    return container
 }
-document.body.appendChild(tabButtons());
+// document.body.appendChild(tabButtons());
 
 export { homeContent, tabButtons };
