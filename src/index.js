@@ -1,6 +1,6 @@
-import { menuContent } from './menu';
-import { homeContent, tabButtons } from './home';
-import { locationContent } from './location';
+import { menuContent } from './modules/menu';
+import { homeContent, tabButtons } from './modules/home';
+import { locationContent } from './modules/location';
 
 const addNavEvents = () => {
     const container = document.getElementById("container");
