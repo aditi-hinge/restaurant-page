@@ -2,32 +2,35 @@ import { menuContent } from './menu';
 import { homeContent, tabButtons } from './home';
 import { locationContent } from './location';
 
-
-
 function addNavEvents(){
     const container =  document.getElementById("container");
-    const homeBtn = document.getElementById("homeBtn");
-    const menuBtn = document.getElementById("menuBtn");
-    const locationBtn = document.getElementById("locationBtn");
+    const tab = document.getElementById("tab");
 
-    homeBtn.addEventListener("click", ()=>{
-        container.innerHTML = "";
-        tabButtons();
-        homeContent();
-        homeBtn.disabled = false;
-    });
-    menuBtn.addEventListener("click", ()=>{
-        container.innerHTML = "";
-        tabButtons();
-        menuContent();
-        menuBtn.disabled = false;
-    });
-    locationBtn.addEventListener("click", ()=>{
-        container.innerHTML = "";
-        tabButtons();
-        locationContent();
-        locationBtn.disabled = false;
-    });
+    tab.addEventListener("click", (event)=>{
+        if(event.target.className === 'navBtn') {
+            if(event.target.id === 'homeBtn') {
+                container.innerHTML = "";
+                tabButtons();
+                addNavEvents();
+                homeContent();
+                return;
+            }
+            if(event.target.id === 'menuBtn') {
+                container.innerHTML = "";
+                tabButtons();
+                addNavEvents();
+                menuContent();
+                return;
+            }
+            if(event.target.id === 'locationBtn') {
+                container.innerHTML = "";
+                tabButtons();
+                addNavEvents();
+                locationContent();
+                return;
+            }
+        }
+    })
 }
 
 function init(){
