@@ -1,26 +1,18 @@
 import './style.css';
-// import FnafBG from './fnaf.jpg';
 
+const container = document.getElementById("container");
 
-let container = document.getElementById("container");
-
-//home tab
-const homeContent=()=>{
-    console.log("home here!");
-    //add BG image
-    // const bGImage = new Image();
-    // bGImage.src = FnafBG;
-    // container.appendChild(bGImage);
-    //home div
+// home tab
+const homeContent = () => {
     const homeDiv = document.createElement("div");
     homeDiv.setAttribute("id","homeContent");
     container.appendChild(homeDiv);
 
-    //create
+    // create
     const welcome = document.createElement("div");
     welcome.textContent = "Welcome to Freddy Fazzbear's Pizzaria";
 
-    //set attribute
+    // set attribute
     welcome.setAttribute("id", "welcome");
 
     //append
@@ -29,43 +21,41 @@ const homeContent=()=>{
     return container;
 }
 
-// document.body.appendChild(homeContent());
+// buttons for tabs
+const tabButtons = () => {
 
-//buttons for tabs
-const tabButtons=()=>{
-    //create tab div
-    let tab = document.createElement("div");
+    // create tab div
+    const tab = document.createElement("div");
     tab.setAttribute("id","tab");
     container.appendChild(tab);
 
-    //create
-    let homeButton = document.createElement("button");
-    let menuButton = document.createElement("button");
-    let locationButton = document.createElement("button");
+    // create
+    const homeButton = document.createElement("button");
+    const menuButton = document.createElement("button");
+    const locationButton = document.createElement("button");
 
-    //set IDs
+    // set IDs
     homeButton.setAttribute("id", "homeBtn");
     menuButton.setAttribute("id", "menuBtn");
     locationButton.setAttribute("id", "locationBtn");
 
-    //set class names
+    // set class names
     homeButton.setAttribute("class", "navBtn");
     menuButton.setAttribute("class", "navBtn");
     locationButton.setAttribute("class", "navBtn");
 
-    //name
+    // name
     homeButton.textContent = "HOME";
     menuButton.textContent = "MENU";
     locationButton.textContent = "LOCATION";
 
-    //append
+    // append
     tab.appendChild(homeButton);
     tab.appendChild(menuButton);
     tab.appendChild(locationButton);
 
-    //return
+    // return
     return container
 }
-// document.body.appendChild(tabButtons());
 
 export { homeContent, tabButtons };

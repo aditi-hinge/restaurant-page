@@ -1,6 +1,6 @@
 import './style.css';
 
-let container = document.getElementById("container");
+const container = document.getElementById("container");
 
 const locationContent=()=>{
     console.log("location here!");
@@ -14,18 +14,18 @@ const locationContent=()=>{
     contact.textContent = "555-555-555"
     locationBox.appendChild(contact);
 
-    //address
+    // address
     const address = document.createElement("div");
     address.setAttribute("class", "contact");
     address.textContent = "1600 Pennsylvania Avenue NW, Washington, DC 20500, United States"
     locationBox.appendChild(address);
 
-    //map
+    // map
     const map = document.createElement("div");
     map.setAttribute("id", "map");
     locationBox.appendChild(map);
 
     return container;
 }
-// document.body.appendChild(locationContent());
+
 export { locationContent };

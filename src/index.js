@@ -2,8 +2,8 @@ import { menuContent } from './menu';
 import { homeContent, tabButtons } from './home';
 import { locationContent } from './location';
 
-function addNavEvents(){
-    const container =  document.getElementById("container");
+const addNavEvents = () => {
+    const container = document.getElementById("container");
     const tab = document.getElementById("tab");
 
     tab.addEventListener("click", (event)=>{
@@ -31,7 +31,7 @@ function addNavEvents(){
             }
         }
     })
-}
+};
 
 function init(){
     tabButtons();
