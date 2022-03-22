@@ -48,6 +48,11 @@ const tabButtons=()=>{
     menuButton.setAttribute("id", "menuBtn");
     locationButton.setAttribute("id", "locationBtn");
 
+    //set class names
+    homeButton.setAttribute("class", "navBtn");
+    menuButton.setAttribute("class", "navBtn");
+    locationButton.setAttribute("class", "navBtn");
+
     //name
     homeButton.textContent = "HOME";
     menuButton.textContent = "MENU";
