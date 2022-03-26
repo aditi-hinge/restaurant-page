@@ -24,7 +24,6 @@ const locationContent=()=>{
     // map
     const map = new Image();
     map.src = Map;
-    // const map = document.createElement("div");
     map.setAttribute("id", "map");
     locationBox.appendChild(map);
 
